@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" href="King'sTobaccoAssets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+    <div class="section">
+        <div class="head_section">
+            <img onclick="location.href='home.html'" src="King'sTobaccoAssets/logo.png" alt="">
+            <ul>
+                <li onclick="location.href='home.html'">Home</li>
+                <li onclick="location.href='about.html'">About Us</li>
+                <li onclick="location.href='brand.html'">Brand</li>
+                <li onclick="location.href='contact.html'" class="active">Contact</li>
+            </ul>
+        </div>
+        <div class="main_section">
+            <div class="left">
+                <div class="form">
+                    <h1>Contact Us</h1>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input id="name" type="text" class="form-control input-lg" required/>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input id="phone" type="text" class="form-control input-lg" required/>
+                    </div>
+                    <div class="form-group1">
+                        <label>Remarks</label>
+                        <textarea id="message" rows="5"></textarea>
+                    </div>
+                    <div class="form_btn">
+                        <button id="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <a href="terms.html">Terms Of Use</a><br>
+                <a href="privacy.html">Privacy Policy</a>
+                <div class="spacer"></div>
+                <p>Factory:Plot No.K180 K181, <br> AL Ghail Industrial Zone <br> RAKEZ <br> Ras AL Khaimah, UAE </p>
+                <div class="spacer"></div>
+                <p>Email: info@kingstobaccofzllc.com</p>
+                <p>Contact Number: +971-7-2436888</p>
+            </div>
+        </div>
+        <div id="success" class="success">
+            <p>Successfully submitted.</p>
+        </div>
+    </div>
+    <div class="section_mobile">
+        <div class="mhead">
+            <div class="drop-menu">
+                <img class="logo" onclick="location.href='home.html'" src="King'sTobaccoAssets/logo.png" alt="">
+                <img class="ham" id="ham-close" src="King'sTobaccoAssets/Frame11.png" alt="">
+                <div class="name-links">
+                    <ul>
+                        <li onclick="location.href='home.html'">Home</li>
+                        <li onclick="location.href='about.html'">About Us</li>
+                        <li onclick="location.href='brand.html'">Brand</li>
+                        <li onclick="location.href='contact.html'" class="active">Contact</li>
+                    </ul>
+                </div>
+            </div>
+            <img id="logo" class="logo" onclick="location.href='home.html'" src="King'sTobaccoAssets/logo.png" alt="">
+            <img id="ham" class="ham" src="King'sTobaccoAssets/Group2.png" alt="">
+        </div>
+        <div class="main_section">
+            <div class="left">
+                <div class="form">
+                    <h1>Contact Us</h1>
+                    <div class="form-group">
+                        <label style="background-color: #c5c7c4;">Name</label>
+                        <input id="mobile_name" style="background-color: #c5c7c4;" type="text" class="form-control input-lg" required/>
+                    </div>
+                    <div class="form-group">
+                        <label style="background-color: #c5c7c4;">Phone Number</label>
+                        <input id="mobile_phone" style="background-color: #c5c7c4;" type="text" class="form-control input-lg" required/>
+                    </div>
+                    <div class="form-group1">
+                        <label style="background-color: #c5c7c4;">Remarks</label>
+                        <textarea id="mobile_message" style="background-color: #c5c7c4;" rows="5"></textarea>
+                    </div>
+                    <div class="form_btn">
+                        <button id="mobile_submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right" style="margin-top: 50px;">
+                <a href="terms.html">Terms Of Use</a><br>
+                <a href="privacy.html">Privacy Policy</a>
+                <div class="spacer"></div>
+                <p>Factory:Plot No.K180 K181, <br> AL Ghail Industrial Zone <br> RAKEZ <br> Ras AL Khaimah, UAE </p>
+                <div class="spacer"></div>
+                <p>Email: info@kingstobaccofzllc.com</p>
+                <p>Contact Number: +971-7-2436888</p>
+            </div>
+        </div>
+        <div id="mobile_success" class="success" style="margin-left: -120px;">
+            <p>Successfully submitted.</p>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var menu = document.querySelector('.drop-menu');
+        var hamclose = document.getElementById('ham-close');
+        var ham = document.getElementById('ham');
+        var submit = document.getElementById("submit");
+        var msubmit = document.getElementById("mobile_submit");
+        var success = document.getElementById("success");
+        var msuccess = document.getElementById("mobile_success");
+
+
+
+
+        ham.addEventListener('click', () => {
+            menu.classList.add('show');
+        })
+        hamclose.addEventListener('click', () => {
+            menu.classList.remove('show');
+        })
+
+        submit.addEventListener('click', () => {
+            //form data
+            var phone = document.getElementById("phone");
+            var message = document.getElementById("message");
+            var name = document.getElementById("name");
+            if (name.checkValidity() && phone.checkValidity()) {
+                var data = {
+                    "name": name.value,
+                    "phone_no": phone.value,
+                    "message": message.value
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "http://18.233.97.114/kings_tobacco/contact_us/",
+                    data: data,
+                    success: success,
+                });
+                success.classList.add("show")
+                name.value = "";
+                phone.value = "";
+                message.value = "";
+                document.getElementById("submit").innerHTML = "Submitted";
+                document.getElementById("submit").disabled = "true";
+                setTimeout(() => {
+                    success.classList.remove("show")
+                }, 3000);
+            } else {
+                phone.reportValidity();
+                name.reportValidity();
+            }
+        });
+
+        //mobile form
+        msubmit.addEventListener('click', () => {
+            console.log("click")
+                //form data
+            var phone = document.getElementById("mobile_phone");
+            var message = document.getElementById("mobile_message");
+            var name = document.getElementById("mobile_name");
+            if (true) {
+                var data = {
+                    "name": name.value,
+                    "phone_no": phone.value,
+                    "message": message.value
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "http://18.233.97.114/kings_tobacco/contact_us/",
+                    data: data,
+                    success: success,
+                });
+                msuccess.classList.add("show")
+                name.value = "";
+                phone.value = "";
+                message.value = "";
+                document.getElementById("mobile_submit").innerHTML = "Submitted";
+                document.getElementById("mobile_submit").disabled = "true";
+                setTimeout(() => {
+                    msuccess.classList.remove("show")
+                }, 3000);
+            } else {
+                phone.reportValidity();
+                name.reportValidity();
+            }
+        });
+    </script>
+</body>
+
+</html>

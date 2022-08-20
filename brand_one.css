@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@100,500;0,600;0,700;0,800;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c5c7c4;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main_section {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 40px;
+}
+
+
+/* left side */
+
+.left {
+    flex: 2;
+    color: #942923;
+}
+
+.left_head {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.left_head h1 {
+    font-weight: 600;
+}
+
+.left_head ul {
+    color: #A75E5B;
+    border-left: 1px solid #818080;
+}
+
+.left_head li {
+    margin: 10px;
+    margin-left: 30px;
+}
+
+.image_section {
+    display: flex;
+}
+
+
+/* image section */
+
+.big {
+    flex: 4;
+}
+
+.mySlides {
+    height: 55vh;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.list_img {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: -20px;
+}
+
+.list_img img {
+    margin-left: 10px;
+    height: 50px;
+    width: 75px;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.img_active {
+    border: 2px solid #942923;
+    padding: 2px;
+}
+
+
+/* btn section */
+
+.btn_section {
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+    align-items: center;
+}
+
+.big .btn_section button {
+    margin-top: 20px;
+    height: 30px;
+    width: 30px;
+    background-color: #CDCDCD;
+    border: 1px solid #942923;
+    border-radius: 15px;
+}
+
+.btn_p_section {
+    margin-top: 8px;
+    display: flex;
+}
+
+.p_active {
+    border: 1px solid #942923;
+}
+
+.big p {
+    margin: 3px;
+    font-weight: 900;
+    border-radius: 10px;
+    justify-content: space-between;
+    padding-top: -10px;
+}
+
+.big button img {
+    margin-top: 2px;
+    height: 18px;
+    width: 18px;
+}
+
+
+/* right side*/
+
+.right {
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* table */
+
+table {
+    margin-top: 20PX;
+    box-sizing: border-box;
+    width: 70%;
+    border-collapse: collapse;
+    border-style: hidden;
+    /* hide standard table (collapsed) border */
+    box-shadow: 5px 5px 30px 20px rgba(255, 255, 255, 0.4), 25px 25px 30px -2px rgba(0, 0, 0, 0.4);
+}
+
+.col1 {
+    color: #942923;
+}
+
+.right table td {
+    text-align: center;
+    font-weight: lighter;
+}
+
+table,
+td {
+    border-radius: 35px;
+}
+
+
+/* border of the outer of the table */
+
+.border-none {
+    border-collapse: collapse;
+    border: none;
+}
+
+.border-none td {
+    border: 1px solid #942923;
+}
+
+.border-none tr:first-child td {
+    border-top: none;
+}
+
+.border-none tr:last-child td {
+    border-bottom: none;
+}
+
+.border-none tr td:first-child {
+    border-left: none;
+}
+
+.border-none tr td:last-child {
+    border-right: none;
+}
+
+
+/* image disable for the first */
+
+#mySlides {
+    display: none;
+}
+
+
+/* smaller than 575 */
+
+@media (max-width: 767.98px) {
+    .main_section {
+        margin: 0;
+        display: block;
+    }
+    .mleft {
+        flex: 2;
+        color: #942923;
+    }
+    .left_head {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+    }
+    .left_head h1 {
+        font-weight: 600;
+        font-size: 28px;
+    }
+    .left_head ul {
+        color: #A75E5B;
+        border-left: 1px solid black;
+    }
+    .left_head li {
+        font-size: 14px;
+        margin: 10px;
+        margin-left: 30px;
+    }
+    .image_section .big img {
+        width: 90%;
+        margin: auto;
+        border-radius: 10px;
+    }
+    .btn_section {
+        margin: auto;
+        width: 20vh;
+    }
+    .btn_section button {
+        margin-top: 20px;
+        height: 30px;
+        width: 30px;
+        background-color: #CDCDCD;
+        border: 1px solid #942923;
+        border-radius: 30px;
+        padding: 5px;
+    }
+    .big button img {
+        width: 5px;
+        margin-top: -0px;
+    }
+    .right table {
+        height: 50vh;
+    }
+    table {
+        font-size: 12px;
+    }
+    .ads_sponsors {
+        margin: auto;
+        width: 50vh;
+        display: flex;
+    }
+    .ads_sponsors div img {
+        width: 100%;
+        height: 150px;
+    }
+    .mySlides {
+        height: 25vh;
+    }
+}

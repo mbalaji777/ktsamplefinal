@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="icon" href="King'sTobaccoAssets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+    <div class="section">
+        <div class="left">
+            <img loading="lazy" onclick="location.href='home.html'" style="filter: blur(0px);
+  -webkit-filter: blur(0px);" src="King'sTobaccoAssets/about1.jpg" alt="">
+            <!--<img loading="lazy" onclick="location.href='home.html'" src="King'sTobaccoAssets/about1.jpg" alt="">-->
+        </div>
+        <div class="right">
+            <ul>
+                <li onclick="location.href='home.html'">Home</li>
+                <li onclick="location.href='about.html'" class="active">About Us</li>
+                <li onclick="location.href='brand.html'">Brand</li>
+                <li onclick="location.href='contact.html'">Contact</li>
+            </ul>
+            <div class="right_content">
+                <h1>We at <br> Kings Tobacco</h1>
+
+                <p>Kings Tobacco located in AL Ghail Industrial Free Zone - Ras AL Khaimah UAE is a joint venture and entity of Jibra Group. The management and technical team of Kings Tobacco hold decades of knowledge experience in the tobacco industry.</p>
+                <p>The cigarette manufacturing set up compirse with the latest technology and most efficient state of the art globally renown machinery. Our product comprises of Kings Size, Queen Size, Slims, Super Slims, Nano and 100's Soft Pack Cigarettes.</p>
+                <p>We at Kings have many iconic brands of Premium Quality.</p>
+
+                <p>At Kings Tobacco we have highly experienced, dedicated, committed knowledgeable staff which is our greatest asset. Our management is always more than willing to share their knowledge experience with customers to innovation and design the
+                    product to achieve the best result. Our machinery makes the process of cigarette manufacturing a work of art.</p>
+                <p>Our Expertise is to create finest tobacco Brands which are crafted into perfection with flavour and style.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section_mobile">
+        <div class="mhead">
+            <div class="drop-menu">
+                <img loading="lazy" class="logo" onclick="location.href='home.html'" src="King'sTobaccoAssets/logo.png" alt="">
+                <img loading="lazy" class="ham" id="ham-close" src="King'sTobaccoAssets/Frame11.png" alt="">
+                <div class="name-links">
+                    <ul>
+                        <li onclick="location.href='home.html'">Home</li>
+                        <li onclick="location.href='about.html'" class="active">About Us</li>
+                        <li onclick="location.href='brand.html'">Brand</li>
+                        <li onclick="location.href='contact.html'">Contact</li>
+                    </ul>
+                </div>
+            </div>
+            <img loading="lazy" id="logo" class="logo" onclick="location.href='home.html'" src="King'sTobaccoAssets/logo.png" alt="">
+            <img loading="lazy" id="ham" class="ham" src="King'sTobaccoAssets/Group2.png" alt="">
+        </div>
+        <div class="main_content">
+            <img loading="lazy" onclick="location.href='home.html'" src="King'sTobaccoAssets/about.png" alt="">
+            <div class="content">
+                <h1>We at Kings Tobacco</h1>
+
+                <p>Kings Tobacco located in AL Ghail Industrial Free Zone - Ras AL Khaimah UAE is a joint venture and entity of Jibra Group. The management and technical team of Kings Tobacco hold decades of knowledge experience in the tobacco industry.</p>
+                <p>The cigarette manufacturing set up compirse with the latest technology and most efficient state of the art globally renown machinery. Our product comprises of Kings Size, Queen Size, Slims, Super Slims, Nano and 100's Soft Pack Cigarettes.</p>
+                <p>We at Kings have many iconic brands of Premium Quality.</p>
+
+                <p>At Kings Tobacco we have highly experienced, dedicated, committed knowledgeable staff which is our greatest asset. Our management is always more than willing to share their knowledge experience with customers to innovation and design the
+                    product to achieve the best result. Our machinery makes the process of cigarette manufacturing a work of art.</p>
+                <p>Our Expertise is to create finest tobacco Brands which are crafted into perfection with flavour and style.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var menu = document.querySelector('.drop-menu');
+        var hamclose = document.getElementById('ham-close');
+        var ham = document.getElementById('ham');
+        ham.addEventListener('click', () => {
+            menu.classList.add('show');
+        })
+        hamclose.addEventListener('click', () => {
+            menu.classList.remove('show');
+        })
+    </script>
+</body>
+
+</html>

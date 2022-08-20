@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c5c7c4;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('King\'sTobaccoAssets/Frame.png');
+    background-repeat: no-repeat;
+    background-size: 140%;
+}
+
+
+/* main section */
+
+.main_section {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_section img {
+    height: 120px;
+    margin-top: 20px;
+}
+
+.main_section .main_content {
+    margin: 2%;
+    margin-top: 5%;
+}
+
+.main_content h1 {
+    font-size: 60px;
+    line-height: .8;
+    font-family: 'Scheherazade', serif;
+    width: 20%;
+    letter-spacing: 2px;
+    color: #8B784A;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #942923;
+}
+
+.main_content p {
+    margin-top: 10px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-size: 22px;
+    width: 100%;
+}
+
+.main_content .small {
+    font-size: 16px;
+    width: 55%;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #942923;
+    margin-top: 10px;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+}
+
+
+/* main img */
+
+#main {
+    height: 50vh;
+    margin-right: 10%;
+    margin-top: 2%;
+}
+
+
+/* bubble */
+
+.bubble {
+    position: absolute;
+    top: 15%;
+    right: 40%;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom, #ffffff, #CDCDCD);
+    animation: example 1s linear infinite;
+    animation-duration: 3s;
+}
+
+@keyframes example {
+    0%,
+    100% {
+        top: 15%;
+    }
+    50% {
+        top: 20%;
+    }
+}
+
+.bubble1 {
+    position: absolute;
+    top: 35%;
+    right: 45%;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, #ffffff, #CDCDCD);
+    animation: example1 1s linear infinite;
+    animation-duration: 3s;
+}
+
+@keyframes example1 {
+    0%,
+    100% {
+        top: 35%;
+    }
+    50% {
+        top: 40%;
+    }
+}
+
+.bubble2 {
+    position: absolute;
+    top: 80%;
+    right: 40%;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, #ffffff, #CDCDCD);
+    animation: example2 1s linear infinite;
+    animation-duration: 3s;
+}
+
+@keyframes example2 {
+    0%,
+    100% {
+        top: 80%;
+    }
+    50% {
+        top: 85%;
+    }
+}
+
+.bubble3 {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom, #ffffff, #CDCDCD);
+    animation: example3 1s linear infinite;
+    animation-duration: 3s;
+}
+
+@keyframes example3 {
+    0%,
+    100% {
+        top: 15%;
+    }
+    50% {
+        top: 20%;
+    }
+}
+
+.bubble4 {
+    position: absolute;
+    top: 80%;
+    right: 10%;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, #ffffff, #CDCDCD);
+    animation: example4 1s linear infinite;
+    animation-duration: 3s;
+}
+
+@keyframes example4 {
+    0%,
+    100% {
+        top: 80%;
+    }
+    50% {
+        top: 85%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    body {
+        background-size: 200%;
+    }
+    .main_content {
+        text-align: center;
+        padding: 10px;
+    }
+    .main_content h1 {
+        letter-spacing: 4px;
+        width: 100%;
+        margin: auto;
+        font-size: 20px;
+        margin-top: 15%;
+    }
+    .main_content p {
+        margin: auto;
+        margin-top: 4%;
+        font-size: 13px;
+        width: 80%;
+    }
+    .main_content .small {
+        width: 100%;
+        font-size: 12px;
+        margin-top: 0;
+    }
+    #down {
+        height: 8vh;
+        position: absolute;
+        bottom: 10px;
+    }
+    #main {
+        height: 45vh;
+        margin: 0px;
+    }
+    .bubble {
+        top: 0%;
+        right: 40%;
+        height: 30px;
+        width: 30px;
+        border-radius: 15px;
+        right: 0%;
+        left: 10%;
+        opacity: .5;
+    }
+    .bubble1 {
+        top: 80%;
+        right: 0%;
+        left: 10%;
+        opacity: .5;
+    }
+    @keyframes example1 {
+        0%,
+        100% {
+            top: 65%;
+        }
+        50% {
+            top: 70%;
+        }
+    }
+    .bubble2 {
+        right: 0%;
+        left: 10%;
+        opacity: .5;
+    }
+    .bubble4 {
+        right: 10%;
+        top: 20%;
+        opacity: .5;
+    }
+    .bubble3 {
+        right: 10%;
+        top: 20%;
+        opacity: .5;
+    }
+}

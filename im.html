@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands</title>
+    <link rel = "icon" href ="King'sTobaccoAssets/logo.png" type = "image/x-icon">
+    <link rel="stylesheet" href="brand_page.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+
+<body>
+    <div class="section">
+        <div class="head_section">
+            <img onclick="location.href='home.html'" src="King'sTobaccoAssets/logo.png" alt="">
+            <ul>
+                <li onclick="location.href='home.html'">Home</li>
+                <li onclick="location.href='about.html'">About Us</li>
+                <li onclick="location.href='brand.html'" class="active">Brand</li>
+                <li onclick="location.href='contact.html'">Contact</li>
+            </ul>
+        </div>
+        <div class="main_section">
+            <div class="card_section">
+                <div onclick="location.href='im_nano.html'" class="card">
+                    <img loading="lazy" src="3/20.jpg" alt="">
+                    <div class="card_btn">
+                        <p>IM Nano</p>
+                    </div>
+                </div>
+                <div onclick="location.href='im_slims.html'" class="card">
+                    <img loading="lazy" src="3/21.jpg" alt="">
+                    <div class="card_btn">
+                        <p>IM Slims</p>
+                    </div>
+                </div>
+                <div style="visibility: hidden;" onclick="location.href='xman_orange.html'" class="card">
+                    <img loading="lazy" src="3/17.jpg" alt="">
+                    <div class="card_btn">
+                        <p>ROBIN Kings Size Blue</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section_mobile">
+        <div class="mhead">
+            <div class="drop-menu">
+                <img loading="lazy" class="logo" onclick="location.href='home.html'" src="King'sTobaccoAssets/logo.png" alt="">
+                <img loading="lazy" class="ham" id="ham-close" src="King'sTobaccoAssets/Frame11.png" alt="">
+                <div class="name-links">
+                    <ul>
+                        <li onclick="location.href='home.html'">Home</li>
+                        <li onclick="location.href='about.html'">About Us</li>
+                        <li onclick="location.href='brand.html'" class="active">Brand</li>
+                        <li onclick="location.href='contact.html'">Contact</li>
+                    </ul>
+                </div>
+            </div>
+            <img loading="lazy" id="logo" class="logo" onclick="location.href='home.html'" src="King'sTobaccoAssets/logo.png" alt="">
+            <img loading="lazy" id="ham" class="ham" src="King'sTobaccoAssets/Group2.png" alt="">
+        </div>
+        <div class="main_section">
+            <div class="card_section">
+                <div onclick="location.href='im_nano.html'" class="card">
+                    <img loading="lazy" src="3/20.jpg" alt="">
+                    <div class="card_btn">
+                        <p>IM Nano</p>
+                    </div>
+                </div>
+                <div onclick="location.href='im_slims.html'" class="card">
+                    <img loading="lazy" src="3/21.jpg" alt="">
+                    <div class="card_btn">
+                        <p>IM Slims</p>
+                    </div>
+                </div>
+                <div style="visibility: hidden;" onclick="location.href='xman_orange.html'" class="card">
+                    <img loading="lazy" src="3/17.jpg" alt="">
+                    <div class="card_btn">
+                        <p>ROBIN Kings Size Blue</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br><br>
+    <script>
+        var menu = document.querySelector('.drop-menu');
+        var hamclose = document.getElementById('ham-close');
+        var ham = document.getElementById('ham');
+        ham.addEventListener('click', () => {
+            menu.classList.add('show');
+        })
+        hamclose.addEventListener('click', () => {
+            menu.classList.remove('show');
+        })
+    </script>
+</body>
+
+</html>

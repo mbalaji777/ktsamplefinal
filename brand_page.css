@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c5c7c4;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('King\'sTobaccoAssets/Group.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* main section */
+
+.main_section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.card_section {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 8%;
+}
+
+.main_section .card {
+    cursor: pointer;
+    border-radius: 15px;
+    height: 30vh;
+    width: 30vh;
+    box-shadow: 5px 5px 30px 20px rgba(255, 255, 255, 0.4), 25px 25px 30px -2px rgba(0, 0, 0, 0.4);
+    font-family: 'Playfair Display', serif;
+    background-color: #CDCDCD;
+    transition: top ease 0.5s;
+    position: relative;
+    top: 0;
+}
+
+.main_section .card:hover {
+    top: -10px;
+}
+
+.card img {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 100%;
+    box-shadow: 0px 8px 15px 10px rgba(0, 0, 0, 0.1);
+    height: 22vh;
+}
+
+.card_btn {
+    text-align: center;
+}
+
+.card_btn p {
+    padding: 10px;
+    color: #942923;
+}
+
+
+/* smaller than 575 */
+
+@media (max-width:767.98px) {
+    body {
+        background-position-y: top;
+    }
+    .card_section {
+        display: block;
+        justify-content: center;
+    }
+    .main_section .card {
+        margin: auto;
+        margin-top: 10%;
+        width: 35vh;
+    }
+}
